@@ -1,4 +1,4 @@
-const socket = io("https://stephen-websocket-chatapp.vercel.app");
+const socket = io("ws://stephen-websocket-chatapp.vercel.app");
 
 const msgInput = document.querySelector("#message");
 const nameInput = document.querySelector("#name");
