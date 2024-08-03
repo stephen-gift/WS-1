@@ -1,9 +1,4 @@
-const socketProtocol = window.location.protocol === "https:" ? "wss:" : "ws:";
-const socketUrl = `${socketProtocol}//${window.location.host}`;
-const socket = io(socketUrl, {
-  path: "/socket.io",
-  transports: ["websocket"],
-});
+const socket = io("https://ws-1-4heu.onrender.com");
 
 const msgInput = document.querySelector("#message");
 const nameInput = document.querySelector("#name");

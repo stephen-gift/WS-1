@@ -26,7 +26,12 @@ const UsersState = {
 };
 
 const io = new Server(expressServer, {
-  cors: "*",
+  cors: {
+    origin:
+      process.env.NODE_ENV === "production"
+        ? ["https://ws-1-4heu.onrender.com"]
+        : ["http://localhost:5500", "http://127.0.0.1:5500"],
+  },
 });
 
 io.on("connection", (socket) => {
