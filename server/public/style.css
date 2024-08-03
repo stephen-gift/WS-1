@@ -2,27 +2,90 @@
   font-size: 1.5rem;
 }
 
+/* General styles */
 body {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem;
+  background-color: #1c1c1c;
+  color: #ffffff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
+/* Form styles */
 form {
   display: flex;
   justify-content: center;
-  gap: 4px;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
+input[type="text"] {
+  width: 300px;
+  padding: 12px 15px;
+  border: 1px solid #555;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  font-size: 16px;
+  color: #333;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]::placeholder {
+  color: #aaa;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+}
+
+button[type="submit"] {
+  padding: 12px 20px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Message list styles */
 ul {
-  display: flex;
-  flex-flow: column;
-  justify-content: left;
-  list-style-type: none;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px 0;
+  overflow-y: auto;
+  max-height: 50vh;
 }
 
-input,
-button {
-  border-radius: 10px;
-  padding: 10px;
+ul li {
+  background-color: #333;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  word-wrap: break-word;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+ul li:hover {
+  background-color: #444;
+}
+
+/* Activity styles */
+.activity {
+  margin-top: 20px;
+  color: #bbb;
+  font-style: italic;
 }
