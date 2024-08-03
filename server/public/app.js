@@ -1,4 +1,9 @@
-const socket = io("ws://stephen-websocket-chatapp.vercel.app");
+const socketProtocol = window.location.protocol === "https:" ? "wss:" : "ws:";
+const socketUrl = `${socketProtocol}//${window.location.host}`;
+const socket = io(socketUrl, {
+  path: "/socket.io",
+  transports: ["websocket"],
+});
 
 const msgInput = document.querySelector("#message");
 const nameInput = document.querySelector("#name");
