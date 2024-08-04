@@ -1,4 +1,5 @@
-const socket = io("https://ws-1-4heu.onrender.com");
+// const socket = io("https://ws-1-4heu.onrender.com");
+const socket = io("https://stephen-websocket-chatapp.vercel.app");
 
 const msgInput = document.querySelector("#message");
 const nameInput = document.querySelector("#name");
